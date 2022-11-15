@@ -195,7 +195,7 @@ export default {
         })
         if (res.meta.status !== 200) return this.$message.error('获取属性参数列表失败')
         this.onlyTableData = res.data
-        console.log(res.data);
+        // console.log(res.data);
       }
     },
     //处理图片预览效果
@@ -219,8 +219,9 @@ export default {
       const picInfo = { pic: '/' + res.data.tmp_path.replace('\\', '/').replace('.jpg', '') }
       // console.log(picInfo);
       //将图片信息对象push 到 pics数组中
-      this.addFrom.pics.push(picInfo)
-      console.log(this.addFrom);
+      //接口失效
+      // this.addFrom.pics.push(picInfo)
+      // console.log(this.addFrom);
     },
     //添加商品
     async add() {

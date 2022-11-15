@@ -263,7 +263,7 @@ export default {
       if (res.meta.status !== 200) return this.$message.error('分配权限失败')
       this.$message.success('权限分配成功')
       this.getRolesList()
-      this.setRightDialogVisible = false 
+      this.setRightDialogVisible = false
     },
     //弹框提示
     getConfirm() {

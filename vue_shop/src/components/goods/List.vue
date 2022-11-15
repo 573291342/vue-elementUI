@@ -33,7 +33,7 @@
         </el-table-column>
         <el-table-column label="操作" width="130px">
           <template slot-scope="scope">
-            <el-button size="mini" type="primary" icon="el-icon-edit"  @click="goAddpage"></el-button>
+            <el-button size="mini" type="primary" icon="el-icon-edit" @click="goAddpage"></el-button>
             <el-button size="mini" type="danger" icon="el-icon-delete" @click="removeById(scope.row.goods_id)">
             </el-button>
           </template>
@@ -101,7 +101,7 @@ export default {
       if (confirmResult === 'cancel')
         return this.$message.info('已经取消了删除')
       const { data: res } = await this.$http.delete('goods/' + id)
-      console.log(res);
+      // console.log(res);
       if (res.meta.status !== 200) return this.$message.error('删除商品失败')
       this.$message.success('删除商品成功')
       this.getGoodsList()
